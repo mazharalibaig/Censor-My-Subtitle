@@ -1,0 +1,11 @@
+{
+  "name": "clean-my-subtitle",
+  "version": "1.0.0",
+  "description": "a simple app to clean your censor your subtitles",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Mazhar Ali Baig",
+  "license": "ISC"
+}
