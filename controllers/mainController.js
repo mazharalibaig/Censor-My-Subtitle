@@ -13,7 +13,13 @@ module.exports = function(app){
 
     app.post('/filedownload',upload.single('filedownload'),(req,res) => {
 
-      console.log(req.file);  
+      console.log(req.file);
+      
+      //Let's try to alter file after uploading is done
+
+      
+
+      
       res.render('download-page');
 
   });

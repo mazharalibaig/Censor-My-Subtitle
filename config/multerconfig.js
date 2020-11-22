@@ -5,8 +5,9 @@ let reqPath = path.join(__dirname, '../');//It goes one directories back from gi
 
 var storage = multer.diskStorage({
 
+    // alter if you want to change destination folder
     destination: reqPath + 'fileuploaddestination',
-    
+
     // change name of file to original subtitle folder name
     filename: function (req, file, cb) {
       cb(null, "Mazhar's files");
