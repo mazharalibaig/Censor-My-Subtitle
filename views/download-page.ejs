@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Censor My Subtitle</title>
+    <style>
+        body{background:skyblue; font-family: verdana ; color: #fff; padding: 30px;}
+        h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+        p{font-size: 16px; text-align: center;}
+        form{text-align: center;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>We are done censoring your file</h1>
+        <p>You may now download it and replace the file in the original folder</p>
+        <form action="/filedownload" method="post" enctype="multipart/form-data">
+            <!-- <input type="file" name="fileupload" /> -->
+            <button type="submit">Download!</button>
+            
+            <!-- take me back not working for now -->
+
+            <!-- <form action="/" method="get">
+                <button type="submit">Take Me Back!</button>
+            </form> -->
+        </form>
+    </div>
+</body>
+</html>

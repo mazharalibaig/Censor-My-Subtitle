@@ -1,0 +1,20 @@
+{
+  "name": "clean-my-subtitle",
+  "version": "1.0.0",
+  "description": "a simple app to clean your censor your subtitles",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "author": "Mazhar Ali Baig",
+  "license": "ISC",
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.6"
+  }
+}
