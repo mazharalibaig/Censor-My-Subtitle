@@ -1,15 +1,5 @@
-var multer  = require('multer');
-
-// decides where and how file will be saved, refer multer npm docs for more info
-var storage = multer.diskStorage({
-    destination: './fileuploaddestination',
-    // change name of file to original subtitle folder name
-    filename: function (req, file, cb) {
-      cb(null, "Mazhar's files");
-    }
-  });
-
-var upload = multer({ storage: storage });
+// defines upload path for multer as ./fileuploaddestination
+var upload = require('../config/multerconfig');
 
 module.exports = function(app){
 
@@ -21,11 +11,11 @@ module.exports = function(app){
     
     });
 
-    app.post('/fileupload',upload.single('fileupload'),(req,res) => {
+    app.post('/filedownload',upload.single('filedownload'),(req,res) => {
 
-        console.log(req.file);
-        res.end('<h1>File Milgaya bhai</h1>');
+      console.log(req.file);  
+      res.render('download-page');
 
-    });
+  });
 
 };
