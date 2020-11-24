@@ -13,17 +13,12 @@
 </head>
 <body>
     <div>
-        <h1>We are done censoring your file</h1>
-        <p>You may now download it and replace the file in the original folder</p>
+        <h1>You have chosen the file ' <%= originalfilename %> '  </h1>
+        <p>Click the button to start download</p>
+        <p>Downloading may take some time depending on your file-size</p>
+        <p>If you are censoring subtitles replace the .srt file with the downloaded file renamed to the original .srt file name</p>
         <form action="/download" method="get" enctype="multipart/form-data">
-            <!-- <input type="file" name="fileupload" /> -->
-            <button type="submit">Download!</button>
-            
-            <!-- take me back not working for now -->
-
-            <!-- <form action="/" method="get">
-                <button type="submit">Take Me Back!</button>
-            </form> -->
+            <button type="submit">Start Downloading!</button>
         </form>
     </div>
 </body>
