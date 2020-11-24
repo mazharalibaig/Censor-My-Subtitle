@@ -1,5 +1,5 @@
 // defines upload path for multer as ./fileuploaddestination
-var upload = require('../config/multerconfig');
+const multerVariables = require('../config/multerconfig');
 
 module.exports = function(app){
 
@@ -11,16 +11,26 @@ module.exports = function(app){
     
     });
 
-    app.post('/filedownload',upload.single('filedownload'),(req,res) => {
+    app.post('/filedownload',multerVariables.upload.single('filedownload'),(req,res) => {
 
       console.log(req.file);
-      
-      //Let's try to alter file after uploading is done
+        
+        res.render('download-page');
 
-      
+  });
 
-      
-      res.render('download-page');
+  app.get('/download',(req,res) => {
+
+      var filePath = multerVariables.uploadLocation + "/Mazhar's files";
+
+      var fileName = "xyz";
+
+    res.download(filePath,fileName, (err) => {
+
+      if(err)
+        console.log(err);
+
+    });
 
   });
 
