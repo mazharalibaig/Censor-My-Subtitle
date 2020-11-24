@@ -4,7 +4,7 @@
   "description": "a simple app to clean your censor your subtitles",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "author": "Mazhar Ali Baig",
   "license": "ISC",
