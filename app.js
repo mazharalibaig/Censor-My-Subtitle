@@ -8,7 +8,7 @@ var app = express();
 app.set('view engine', 'ejs');
 
 // setup static files 
-app.use(express.static('./public'));
+app.use(express.static(__dirname + '/public'));
 
 //firing controllers
 mainController(app);

@@ -12,11 +12,15 @@ module.exports = function(app){
 
     app.get('/',(req,res) => {
 
+        console.log('index requested');
+
         res.render('index');
     
     });
 
     app.post('/filedownload',multerVariables.upload.single('filedownload'),(req,res) => {
+
+      console.log('file milgaya');
 
       filePath = multerVariables.uploadLocation + '/' + fileName;
         
